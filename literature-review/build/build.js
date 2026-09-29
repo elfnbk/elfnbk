@@ -32,12 +32,12 @@ for(const g of d.groups){
   const rows=[new TableRow({tableHeader:true,children:hdr.map((h,i)=>cell([cp(h,{bold:true,after:0})],cols[i]))})];
   for(const it of g.items){
     const c=[cell([cp(it.ref,{after:0})],cols[0])];
-    const contrib=it.contrib;
+    const contrib=it.contrib+(it.pos?'':` Architectural approach: ${arch(it.arch)}.`);
     c.push(cell([cp(contrib,{after:0})],cols[1]));
     if(hasPos){
       const p=it.pos;
       const A='Architectural approach: '+arch(it.arch)[0].toUpperCase()+arch(it.arch).slice(1);
-      c.push(cell(p?[cp('Field: '+p.field),cp(A),cp('Axis: '+p.axis),cp('Basis (verified wording): '+p.basis,{after:0})]:[cp(A,{after:0})],cols[2]));
+      c.push(cell(p?[cp('Field: '+p.field),cp(A),cp('Axis: '+p.axis),cp('Basis (verified wording): '+p.basis,{after:0})]:[cp('',{after:0})],cols[2]));
     }
     c.push(cell([cp(it.url||''),cp('Verified through: '+it.ver,{after:0,color:'555555'})],cols[cols.length-1]));
     rows.push(new TableRow({cantSplit:false,children:c}));
