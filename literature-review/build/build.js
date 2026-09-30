@@ -18,7 +18,7 @@ children.push(new Paragraph({spacing:{after:80},children:[new TextRun({text:d.ti
 children.push(para('Elif Bek',{after:240,align:AlignmentType.LEFT}));
 children.push(heading('Abstract',24));
 d.abstract.forEach(p=>children.push(para(p,{})));
-children.push(para(d.fn,{size:16,after:240,align:AlignmentType.LEFT}));
+children.push(para(d.fn,{size:14,after:240,align:AlignmentType.LEFT}));
 children.push(heading('Literature Review',24));
 children.push(para(d.methods,{}));
 children.push(para(d.counts,{}));
