@@ -10,7 +10,7 @@ def text(seg):
     return re.sub(r'[A-Za-z]+', hy, seg)
 # hyphenate text nodes only inside td (not class l), p, figcaption, .cap
 out = []; pos = 0
-for m in re.finditer(r'<(td(?![^>]*class="l")|p|figcaption|div class="cap")[^>]*>(.*?)</(td|p|figcaption|div)>', body, re.S):
+for m in re.finditer(r'<(td(?![^>]*class="l")|p(?![^>]*class="nohy")|figcaption|div class="cap")[^>]*>(.*?)</(td|p|figcaption|div)>', body, re.S):
     out.append(body[pos:m.start(2)])
     inner = m.group(2)
     inner = re.sub(r'(>|^)([^<]+)', lambda t: t.group(1) + text(t.group(2)), inner)
