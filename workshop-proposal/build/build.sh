@@ -7,6 +7,6 @@ from pypdf import PdfReader, PdfWriter
 b=PdfReader('body.pdf'); c=PdfReader('cover.pdf')
 w=PdfWriter(); w.add_page(c.pages[0])
 for p in b.pages[1:]: w.add_page(p)
-w.add_metadata({'/Title':'(Imaginary) Lands of Border: What Line Contains'})
+w.metadata = None  # no document info (Producer/Title/Creator) in the delivered file
 w.write('../ImaginaryLandsOfBorder_WorkshopProposal_v6.pdf'); print('pages',len(b.pages))
 PY
