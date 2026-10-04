@@ -81,6 +81,6 @@ deniztrader
 
 İki listeye de uymayan mail BELİRSİZ sayılır ve ona dokunulmaz.
 
-Taşıma: JUNK olan dizi tek mesajlıysa update_message_labels ile mesaj kimliğine addLabelIds=[Junk etiketi], removeLabelIds=["INBOX"] uygula. Birden fazla mesajlıysa label_thread ile Junk etiketini ekle, unlabel_thread ile INBOX'ı kaldır. Çağrıları paralel gruplar halinde yapabilirsin.
+Taşıma: JUNK olan dizi tek mesajlıysa update_message_labels ile o mesajın kimliğine (messages[0].id) addLabelIds=[Junk etiketi], removeLabelIds=["INBOX"] uygula. Birden fazla mesajlıysa label_thread ile Junk etiketini ekle, unlabel_thread ile INBOX'ı kaldır. Çağrıları paralel gruplar halinde yapabilirsin.
 
 Özet: Hiç Denizbank maili yoksa bunu tek cümleyle belirt. Aksi halde kaç dizi tarandığını, kaçının Junk'a taşındığını, kaçının korunduğunu ve BELİRSİZ kalanların konu satırlarını listele. BELİRSİZ konular varsa kural listelerine eklenmesi için öneri yaz ama kendin karar verip taşıma.
