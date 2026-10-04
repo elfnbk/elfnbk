@@ -1,6 +1,6 @@
 # Denizbank Junk Ajanı
 
-Bu klasör, Gmail gelen kutusuna Denizbank'tan (info@e-posta.denizbank.com) gelen kampanya, reklam ve kutlama maillerini "Junk" etiketine taşıyan günlük ajanın kurallarını içerir. Kart harcaması, nakit çekim, harcama iadesi, otomatik ödeme talimatı, döviz emri, parola değişikliği ve güvenlik uyarısı gibi bildirimler gelen kutusunda kalır.
+Bu klasör, Gmail gelen kutusuna Denizbank'tan (info@e-posta.denizbank.com) yeni gelen kampanya, reklam ve kutlama maillerini "Junk" etiketine taşıyan günlük ajanın kurallarını içerir. Ajan her sabah yalnızca son iki gün içinde gelen maillere bakar; daha eski maillere dokunmaz. Kart harcaması, nakit çekim, harcama iadesi, otomatik ödeme talimatı, döviz emri, parola değişikliği ve güvenlik uyarısı gibi bildirimler gelen kutusunda kalır.
 
 Kampanya mailleri ile işlem bildirimleri aynı adresten geldiği için mailler Spam'e işaretlenmez. Spam işareti Gmail'in bu adresi öğrenmesine ve zamanla önemli bildirimleri de Spam'e atmasına yol açabilir. Bunun yerine ajan "Junk" etiketini ekler ve maili gelen kutusundan kaldırır (arşivler). Hiçbir mail silinmez; yanlış taşınan bir mail Gmail'de "Junk" etiketinden bulunup gelen kutusuna geri alınabilir.
 
