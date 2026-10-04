@@ -37,6 +37,8 @@ itiraz
 yatırıldı
 ücretlerde değişiklik
 \bhk\.
+dijital slip
+hesap hareketleri
 
 JUNK listesi (KORU listesiyle eşleşmeyen ve bunlardan biriyle eşleşen mail taşınır):
 bonus
@@ -72,6 +74,10 @@ portföy
 uçuş mili
 analizleri
 sigortası
+\bbes\b
+fon biriktiren
+keyfini
+deniztrader
 
 İki listeye de uymayan mail BELİRSİZ sayılır ve ona dokunulmaz.
 

@@ -43,6 +43,8 @@ KEEP_PATTERNS = [
     r"yatırıldı",
     r"ücretlerde değişiklik",
     r"\bhk\.",
+    r"dijital slip",
+    r"hesap hareketleri",
 ]
 
 JUNK_PATTERNS = [
@@ -79,6 +81,10 @@ JUNK_PATTERNS = [
     r"uçuş mili",
     r"analizleri",
     r"sigortası",
+    r"\bbes\b",
+    r"fon biriktiren",
+    r"keyfini",
+    r"deniztrader",
 ]
 
 
