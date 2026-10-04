@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>(Imaginary) Lands of Border</title>
+<link rel="stylesheet" href="gf.css">
+<style>
+
+:root { --blue: #2E5AA7; --ink: #000; --head: #262626; --rule: #dcdcdc; }
+@page { size: Letter; margin: 72pt 72pt 72pt 72pt; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { margin: 0; font-family: "Poppins", sans-serif; font-kerning: normal; font-feature-settings: "kern" 1, "liga" 1; text-rendering: geometricPrecision; font-size: 10.5pt; line-height: 20.4pt; color: var(--ink); }
+
+p { margin: 0 0 8pt; text-align: justify; text-justify: inter-word; orphans: 2; widows: 2; }
+a { color: inherit; }
+
+h1 { font-size: 22pt; line-height: 30pt; font-weight: 700; color: var(--head); margin: 22pt 0 10pt; padding-bottom: 6pt; border-bottom: 1.4pt solid var(--blue); break-after: avoid; break-inside: avoid; }
+h2 { font-size: 12.5pt; line-height: 17pt; font-weight: 700; color: var(--head); margin: 16pt 0 4pt; break-after: avoid; }
+.newpage { break-before: page; }
+.newpage > h1:first-child, h1.first { margin-top: 0; }
+
+/* cover */
+.cover { height: 648pt; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; break-after: page; }
+.cover .t { font-size: 36pt; line-height: 54pt; font-weight: 700; color: var(--head); }
+.cover .s { font-size: 31pt; line-height: 40pt; font-style: italic; color: var(--head); margin-top: 22pt; }
+.cover .m { font-size: 10.5pt; line-height: 20pt; margin-top: 42pt; }
+
+/* contents */
+.toc { list-style: none; padding: 0; margin: 4pt 0 0; font-size: 10.5pt; line-height: 22pt; }
+.toc li::before { content: "•"; display: inline-block; width: 18pt; text-indent: 6pt; }
+.toc li.l1 { font-weight: 700; }
+.toc li.l2 { padding-left: 22pt; }
+.toc a { text-decoration: none; }
+
+/* figures */
+figure { margin: 10pt 0 10pt; break-inside: avoid; }
+figure img { display: block; height: auto; margin: 0 auto 6pt; }
+figcaption, .cap { font-size: 8.5pt; line-height: 13pt; text-align: justify; text-justify: inter-word; }
+figcaption b, .cap b { font-weight: 700; }
+.w100 img { width: 100%; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; column-gap: 18pt; row-gap: 12pt; margin: 4pt 0 8pt; }
+.grid figure { margin: 0; }
+.grid img { width: 100%; }
+.grid .cap { font-size: 8.5pt; line-height: 13pt; }
+
+/* tables */
+table { width: 100%; border-collapse: collapse; font-size: 8.5pt; line-height: 14pt; margin: 8pt 0 14pt; }
+thead { display: table-header-group; }
+th { text-align: left; font-weight: 700; padding: 6pt 5pt 5pt; border-bottom: 1.2pt solid var(--blue); vertical-align: bottom; }
+td { padding: 6pt 5pt 7pt; border-bottom: 0.6pt solid var(--rule); vertical-align: top; text-align: justify; text-justify: inter-word; }
+td.l, th.l { text-align: left; }
+tr { break-inside: avoid; }
+tr.shared td:first-child { color: var(--blue); }
+td a { text-decoration: underline; }
+
+blockquote { margin: 6pt 0 10pt 8pt; padding: 0 0 0 15pt; border-left: 2.4pt solid var(--blue); font-style: italic; }
+blockquote p { margin: 0; }
+</style>
+</head>
+<body>
+
+<section class="cover">
+  <div class="t">(IMAGINARY) LANDS<br>OF BORDER</div>
+  <div class="s">What Line Contains</div>
+  <div class="m">A workshop proposal for <b>STAY WHERE YOU ARE</b><br>Week 4: Border Architectures</div>
+</section>
+
+<section>
+<h1 class="first">Contents</h1>
+<ul class="toc">
+  <li class="l1"><a href="#context">Context</a></li>
+  <li class="l1"><a href="#framework">Workshop Framework: The Thickness of a Line</a></li>
+  <li class="l2"><a href="#abstraction">The Line as Abstraction</a></li>
+  <li class="l2"><a href="#jerusalem">Jerusalem, 1948: Living Within the Width of the Line</a></li>
+  <li class="l2"><a href="#musrara">From Musrara to Önder</a></li>
+  <li class="l2"><a href="#scale">Scale as the Instrument of Approach</a></li>
+  <li class="l1"><a href="#workshop">Workshop / (Imaginary) Lands of Border: What Line Contains</a></li>
+  <li class="l2"><a href="#layers">Four Layers of Border</a></li>
+  <li class="l2"><a href="#mapping">Mapping Önder in Three Dimensions</a></li>
+  <li class="l2"><a href="#land">The (Imaginary) Land</a></li>
+  <li class="l1"><a href="#ethics">Ethical Considerations</a></li>
+  <li class="l1"><a href="#references">Key References</a></li>
+  <li class="l1"><a href="#structure">Proposed Workshop Structure</a></li>
+  <li class="l2"><a href="#day1">Day 1: Presentation, Walk and Reflection</a></li>
+  <li class="l2"><a href="#day2">Day 2: Mapping</a></li>
+</ul>
+</section>
+
+<section class="newpage">
+<h1 id="context">Context</h1>
+<p>We propose a two-day closing workshop for Week 4 of STAY WHERE YOU ARE, Border Architectures, which the program defines as "movement as structured, regulated, and restricted through systems, infrastructure, and control". The workshop builds on our article on the Syrian population under temporary protection in the Önder Neighbourhood of Ankara (Bayraktar et al., 2025). One of its findings frames the proposal: a grid drawn from above is gradually rendered illegible by the paths, additions and adaptations of those who inhabit it (Dalal, 2022; Figure 2). In Önder, the article follows the same tension at the scale of a neighbourhood, between the boundary of an urban transformation area declared in 2013, the Siteler furniture district that separates the neighbourhood from the city, and the paths that residents opened across vacant plots (Figure 1).</p>
+<p>The framework of STAY WHERE YOU ARE shapes the workshop in three ways. The program does not aim to represent migration but to create a situation where different positions can coexist, interact and remain unresolved, and its participants include individuals with lived migration experience. The outputs therefore need to be suitable for the documentary film and the publication. And since the project is a traveling structure, the workshop is grounded in Ankara without being confined to it.</p>
+
+<figure>
+  <img src="img/fig1.jpg" style="width:64.3%" alt="">
+  <figcaption><b>Figure 1.</b> The Önder Neighbourhood and the Siteler district, Ankara. <i>Note.</i> From Bayraktar et al. (2025, Figure 8), based on Google Earth imagery.</figcaption>
+</figure>
+
+<figure class="w100">
+  <img src="img/fig2.jpg" alt="">
+  <figcaption><b>Figure 2.</b> The grid of the Zaatari camp becoming illegible over time. <i>Note.</i> From Bayraktar et al. (2025, Figure 3), reproduced from Dalal (2022, p. 200).</figcaption>
+</figure>
+
+<h1 id="framework">Workshop Framework: The Thickness of a Line</h1>
+<p>The opening presentation is organised around one question: if we move close enough to a border line, what do we find inside it? Scale is the instrument of this approach, but the starting point is the recognition that the line itself is an abstraction.</p>
+
+<h2 id="abstraction">The Line as Abstraction</h2>
+<p>On the plan, a border is a single line. In Euclid's definition a line is "breadthless length", a succession of points that occupies no area of its own. This is what makes it so effective as a border: it leaves no margin between two sides. Yet this precision holds only on the abstract plane of the plan, within its own coordinates, scale and conventions. Transferred to the ground, the same line comes to contain the decisions that produced it (who drew it, on which map, under which authority), the things it cuts through (a street, a house, a walking route) and the consequences it generates (waiting, a permit, a demolition, a tenancy). Evans (1986) shows that drawing is never a neutral medium in its translation into building, Scott (1998) describes how the state simplifies space in order to render it legible and governable, and Harley (1989) reads the map as a text of power.</p>
+<p>Moving closer to the line is therefore not a technical enlargement but a way of making visible, one layer at a time, what the abstraction leaves out. The workshop structures this approach as four layers of border, the abstract plane, the scale of the plan, the ground and everyday life, which are set out in the workshop section below.</p>
+
+<h2 id="jerusalem">Jerusalem, 1948: Living Within the Width of the Line</h2>
+<p>In late November 1948, the Israeli and Jordanian commanders in Jerusalem, Moshe Dayan and Abdullah al-Tal, drew the ceasefire lines on a 1:20,000 map laid out on the floor of an abandoned house in the Musrara quarter. Their chinagraph pencils produced lines that were generally 3-4 mm wide, and in places the width of the line became irregular and indeterminate (Hilal et al., 2013). At that scale, 3-4 mm correspond to roughly 60-80 m on the ground (our calculation). The space between the two lines, and the thickness of the lines themselves, became a no man's land that remained in place until 1967 (Figures 3-5). Meron Benvenisti's question, cited by Hilal et al. (2013), is the question of this workshop: "Who owns the 'width of the line'?"</p>
+<p>The case also involves migration, located within that width. The line divided Musrara into three parts: a residential part in West Jerusalem, a central zone designated as no man's land, and a commercial part near Damascus Gate under Jordanian control (Jerusalem Story Team, 2021). Its Palestinian residents fled or were expelled in 1948 and could not return; the sources describe the circumstances of their departure with different emphases. The vacated houses on the Israeli side were then allocated by the Ministry of Housing to Jewish immigrants from North Africa (Musrara, n.d.), who lived in overcrowded conditions exposed to sniper fire and landmines along the border (Caridi, 2015). In 1971, second-generation residents founded the Israeli Black Panthers, a protest movement against discrimination, in the same neighbourhood (Figure 6). The width of the line thus held two movements at once: those forced to leave, and the newcomers placed at its most exposed edge. Benvenisti's question becomes: who lives within the width of the line? The presentation will approach Jerusalem through the houses and residents of Musrara rather than through the wider symbolic and political status of the city.</p>
+
+<div class="grid">
+  <figure>
+    <img src="img/fig3.jpg" alt="">
+    <div class="cap"><b>Figure 3.</b> Detail of the United Nations map of central Jerusalem, showing the "Israel line" (blue) and the "Jordan line" (green) of the Israel-Jordan Armistice Line of 3 April 1949; the strip between them formed the no man's land. <i>Note.</i> United Nations, "Central portion of the Jerusalem area: Principal holy places", November 1949. Public domain, via <a href="https://commons.wikimedia.org/wiki/File:UN_Map_of_Central_Jerusalem_November_1949.jpg">Wikimedia Commons</a>.</div>
+  </figure>
+  <figure>
+    <img src="img/fig4.jpg" alt="">
+    <div class="cap"><b>Figure 4.</b> Prophet Samuel Street, with the barrier between Jordanian and Israeli Jerusalem in the foreground, 1948. <i>Note.</i> Photograph by Willem van de Poll. Nationaal Archief, Fotocollectie Van de Poll, 255-0326. CC0, via <a href="https://commons.wikimedia.org/wiki/File:Jeruzalem._De_Profeet_Samuelstraat,_met_op_de_voorgrond_de_afscheiding_tussen_Jo,_Bestanddeelnr_255-0326.jpg">Wikimedia Commons</a>.</div>
+  </figure>
+  <figure>
+    <img src="img/fig5.jpg" alt="">
+    <div class="cap"><b>Figure 5.</b> The no man's land between Israeli and Jordanian Jerusalem, looking towards the Old City walls, c. 1964. <i>Note.</i> Photograph by Etan J. Tal. CC BY-SA 3.0, via <a href="https://commons.wikimedia.org/wiki/File:JerusalemNoMansLand-v.jpg">Wikimedia Commons</a>.</div>
+  </figure>
+  <figure>
+    <img src="img/fig6.jpg" alt="">
+    <div class="cap"><b>Figure 6.</b> "They're Not Nice" Alley in Musrara, named after Golda Meir's remark about the Black Panthers, 2011. <i>Note.</i> Photograph by Hedva Sanderovitz, PikiWiki Israel. Public domain, via <a href="https://commons.wikimedia.org/wiki/File:PikiWiki_Israel_15327_Musrara_neighborhood_Jerusalem.jpg">Wikimedia Commons</a>.</div>
+  </figure>
+</div>
+
+<h2 id="musrara">From Musrara to Önder</h2>
+<p>The same question can be carried to Önder, as an analogy rather than an equivalence: in Jerusalem the line is a state border drawn after a war, in Önder an urban planning decision, and the measures of violence, scale and duration differ. What the two cases share is a mechanism. According to the article, after Önder was declared an urban transformation area in 2013, Turkish families moved out and rented the houses they left to Syrian families, who continued to live in houses under demolition orders until 2015; the article describes this "spatio-temporal gap" as an opportunity for a population that chose to live in the city rather than in camps (Bayraktar et al., 2025). Günaydın Temel and Kahraman (2019) similarly observe that Syrians settled in the houses vacated by Turkish residents, attracted by low rents and by proximity to work in Siteler.</p>
+<p>The student projects discussed in the article address this condition through lines of their own (Figure 7). Yokkent treats the paths found on the site as elements that can "define boundaries", distribute circulation and change over time (Figure 8); Eşik (Threshold) defines the neighbourhood centre as a threshold where two populations meet (Figure 9); and Köprü (Bridge) connects the housing area and Siteler across the site (Figure 10).</p>
+
+<figure>
+  <img src="img/fig7.jpg" style="width:58%" alt="">
+  <figcaption><b>Figure 7.</b> Project sites of the second-, third- and fourth-year studios (MİM291, MİM391, MİM491) in the Önder Neighbourhood. <i>Note.</i> From Bayraktar et al. (2025, Figure 9), based on Google Earth imagery.</figcaption>
+</figure>
+
+<figure class="w100">
+  <img src="img/fig8.jpg" alt="">
+  <figcaption><b>Figure 8.</b> Yokkent Project, Özge Çakmak (MİM491). <i>Note.</i> From Bayraktar et al. (2025, Figure 10).</figcaption>
+</figure>
+
+<figure class="w100">
+  <img src="img/fig9.jpg" alt="">
+  <figcaption><b>Figure 9.</b> Farklılıkların Bir Aradalığı: Eşik Project, Aslı Azelya Kaya (MİM491). <i>Note.</i> From Bayraktar et al. (2025, Figure 12).</figcaption>
+</figure>
+
+<figure class="w100">
+  <img src="img/fig10.jpg" alt="">
+  <figcaption><b>Figure 10.</b> Köprü Project, Ali Yiğit Ersoy (MİM391). <i>Note.</i> From Bayraktar et al. (2025, Figure 16).</figcaption>
+</figure>
+
+<h2 id="scale">Scale as the Instrument of Approach</h2>
+<p>Every planning line carries a width on the ground according to its scale. The table below, calculated by the authors, closes the presentation and serves as a reference for the mapping, in which plans and sections of Önder are used at different scales.</p>
+<table>
+  <thead><tr><th>Scale</th><th>0.3 mm line</th><th>0.5 mm line</th><th>1 mm line</th><th>3-4 mm pencil line</th></tr></thead>
+  <tbody>
+    <tr><td class="l">1:1,000</td><td class="l">0.3 m</td><td class="l">0.5 m</td><td class="l">1 m</td><td class="l">3-4 m</td></tr>
+    <tr><td class="l">1:5,000</td><td class="l">1.5 m</td><td class="l">2.5 m</td><td class="l">5 m</td><td class="l">15-20 m</td></tr>
+    <tr><td class="l">1:20,000</td><td class="l">6 m</td><td class="l">10 m</td><td class="l">20 m</td><td class="l">60-80 m</td></tr>
+  </tbody>
+</table>
+
+<h1 id="workshop">Workshop / (Imaginary) Lands of Border: What Line Contains</h1>
+<p>The workshop discusses border through the line and opens this discussion through four layers: the abstract plane, the scale of the plan, the ground and everyday life. Participants are grouped according to these layers, and each group maps Önder through its own layer. The first day combines the opening presentation with a walk through Önder, so that the lines of the plan are encountered on the ground before they are mapped; the second day is dedicated to the mapping.</p>
+
+<h2 id="layers">Four Layers of Border</h2>
+<p>Each layer reads the border in a different register and corresponds to one group of participants. The observations listed for Önder are taken from the article and from our earlier visit to the neighbourhood.</p>
+<table>
+  <colgroup><col style="width:15.5%"><col style="width:25%"><col style="width:28.5%"><col style="width:31%"></colgroup>
+  <thead><tr><th>Layer</th><th>The border here</th><th>Questions for the group</th><th>In Önder</th></tr></thead>
+  <tbody>
+    <tr><td class="l">Abstract Plane</td><td>Lines drawn on a plan or a section. They are abstractions that do not exist as such on the ground, and each expresses a decision without width.</td><td>Who drew the line, at which scale and under which authority? What does the line decide, and what does it leave out?</td><td>The urban transformation decision of 2013 and the last approved development plan of 2010, under which some of the parcels became green areas (Bayraktar et al., 2025, p. 170)</td></tr>
+    <tr><td class="l">Scale of the Plan</td><td>The border changes with scale. At the scale of the house it is drawn within and around the dwelling; at the scale of the city it is defined by the relation of the neighbourhood to the networks around it.</td><td>How is the border within the house drawn and adapted? Where does the neighbourhood end when it is read through transport, infrastructure and the districts around it?</td><td>Privacy problems caused by inadequate dwelling space; limited public transport; Siteler as a barrier between the Syrian population and the city (Bayraktar et al., 2025, p. 172)</td></tr>
+    <tr><td class="l">Ground</td><td>The physical elements that define a border on the ground.</td><td>Is the border here a void, a fence, a row of tall buildings or a road? What is physically present where the line passes?</td><td>Vacant parcels left after demolition and the high blocks built on them (p. 170); fragmented green areas that became unused voids; the paths that the Syrian population opened across the site (p. 172)</td></tr>
+    <tr><td class="l">Everyday Life</td><td>The border as it is drawn in daily practices, in the communication among residents and between migrant and non-migrant residents.</td><td>Where is the border drawn in encounters, conversations and routines? Who addresses whom, where and in which language?</td><td>Arabic signs on almost every business along Selçuk Caddesi, alongside a few Turkish shopkeepers (p. 171); the limited interaction between the Turkish and Syrian populations (p. 172); the exchanges with shopkeepers and the forms of communication observed during our visit</td></tr>
+  </tbody>
+</table>
+
+<h2 id="mapping">Mapping Önder in Three Dimensions</h2>
+<p>On the second day, each group produces its layer of a single map mounted on a wall. The map is not two-dimensional: prints of plans and sections of Önder at different scales are placed on it and can be mounted at different depths, so that the layers overlap without collapsing into one plane. Photographs taken by the participants during the walk and the workshop are either printed and added to the map or projected onto it. Each group works with the materials that correspond to its layer, from the plan prints of the abstract plane to the photographs of encounters in everyday life, and the four layers are brought together on the same wall at the close of the day.</p>
+<p>The material provided to the groups includes plan and section prints of Önder at different scales, satellite images, a selection of observations from the article and the student projects (Figures 7-10), and the 1949 Jerusalem map. Bouchra Khalili's <i>The Mapping Journey Project</i> (2008-2011), in which migrants trace their routes on a map by hand, offers a reference for adding routes and voices to the map.</p>
+
+<h2 id="land">The (Imaginary) Land</h2>
+<p>The title of the workshop refers to what this map produces. Once the border has been discussed through the four layers, the question becomes what kind of map the neighbourhood produces when it is imagined as a land. The (imaginary) land is a map that attempts to express more than an abstract, two-dimensional line whose meaning shifts across scales, and that seeks to make visible the border on the ground and in social life. The parenthesis in the title marks the position of the outputs: they do not claim to represent Önder or to speak on behalf of its residents, but construct, from a walk and a set of documents, what the lines of the neighbourhood might contain. The map can remain in the exhibition and serve the documentary film and the publication.</p>
+<p>Proposed description for the program text:</p>
+<blockquote><p>The workshop asks what a border line contains once it is drawn on a plan, taking the Önder Neighbourhood in Ankara as its primary case. It focuses on the question of the border: How does a line on a plan define, separate, and fix a border, and, conversely, how is that border redrawn by the scales, grounds, and encounters it passes through? This workshop will approach the border through four layers, the abstract plane, the scale of the plan, the ground, and everyday life, considering it not simply as a line without width but in relation to drawing, infrastructure, physical edges, dwelling, and social encounter. It will explore how a three-dimensional map can mediate between the line on the plan and the lived neighbourhood, asking what becomes visible, to whom, and through what drawings, photographs, and layers.</p></blockquote>
+
+<h1 id="ethics">Ethical Considerations</h1>
+<p>Since participants include individuals with lived migration experience, no exercise depends on the narration of personal migration stories, and drawing on one's own experience remains optional. The walk takes place in an inhabited neighbourhood: photographs focus on spaces and traces rather than on residents, and people are photographed only with their consent. Khalili's approach, which shows hands and voices but not faces, offers a model for filming. We propose separate consent for filming and publication, and workshop instructions in Turkish and English.</p>
+
+<h1 id="references">Key References</h1>
+<p>References shared with the bibliography of the article are marked in blue. Sources of the figures are given in their captions.</p>
+<table>
+  <colgroup><col style="width:50%"><col style="width:33%"><col style="width:17%"></colgroup>
+  <thead><tr><th>Reference</th><th>Used for</th><th>Link</th></tr></thead>
+  <tbody>
+    <tr><td>Bayraktar, A. N., Önertürk, C., Ölmez Gültek, M., Bek, E. N., Gürel, A., &amp; Hatipoğlu, Ş. (2025). Geçicilik, göç ve barınma: Ankara Önder Mahallesi'nde geçici koruma altındaki Suriyeli nüfus için mekânsal öneriler. <i>İnsan Hareketliliği Uluslararası Dergisi</i>, 5(2), 159-192</td><td>The article on which the workshop is based; Figures 1, 2 and 7-10</td><td class="l"><a href="https://dergipark.org.tr/en/pub/ijhm/article/1760459">DergiPark</a></td></tr>
+    <tr class="shared"><td>Dalal, A. (2022). The refugee camp as urban housing. <i>Housing Studies</i>, 37(2), 189-211</td><td>The grid of Zaatari and its transformation</td><td class="l"><a href="https://doi.org/10.1080/02673037.2020.1782850">DOI</a></td></tr>
+    <tr class="shared"><td>Herz, M. (2013). Refugee camps of the Western Sahara. <i>Humanity</i>, 4(3), 365-391</td><td>The camp between the temporary and the permanent</td><td class="l"><a href="https://humanityjournal.org/wp-content/uploads/2014/06/4.3-Refugee-Camps-of-the-Western-Sahara.pdf">PDF</a></td></tr>
+    <tr class="shared"><td>Günaydın Temel, D., &amp; Kahraman, Z. E. (2019). Göçmen mahallelerinde konut dış mekânında uyarlama: "Küçük Halep," Önder Mahallesi, Ankara örneği. <i>Ankara Araştırmaları Dergisi</i>, 7(2), 415-431</td><td>Syrian households in houses vacated by Turkish residents; the adaptation of the outdoor space of houses</td><td class="l"><a href="https://doi.org/10.5505/jas.2019.74936">DOI</a></td></tr>
+    <tr><td>Euclid. <i>Elements</i>, Book I, Definitions (D. E. Joyce, Ed.)</td><td>"A line is breadthless length"</td><td class="l"><a href="https://mathcs.clarku.edu/~djoyce/elements/bookI/bookI.html">Clark University</a></td></tr>
+    <tr><td>Evans, R. (1986). Translations from drawing to building. <i>AA Files</i>, (12)</td><td>Drawing as a non-neutral medium</td><td class="l"><a href="https://bookshop.aaschool.ac.uk/?product=aa-files-12">AA Bookshop</a></td></tr>
+    <tr><td>Scott, J. C. (1998). <i>Seeing like a state</i>. Yale University Press</td><td>Legibility and simplification</td><td class="l"><a href="https://yalebooks.yale.edu/book/9780300078152/seeing-like-a-state/">Yale University Press</a></td></tr>
+    <tr><td>Harley, J. B. (1989). Deconstructing the map. <i>Cartographica</i>, 26(2), 1-20</td><td>The map as a text of power</td><td class="l"><a href="https://doi.org/10.3138/E635-7827-1757-9T53">DOI</a></td></tr>
+    <tr><td>Hilal, S., Petti, A., Weizman, E., &amp; Perugini, N. (2013). The lawless line. <i>London Review of International Law</i>, 1(1), 201-209</td><td>The 1:20,000 map, the 3-4 mm lines, Benvenisti's question</td><td class="l"><a href="https://doi.org/10.1093/lril/lrt011">DOI</a></td></tr>
+    <tr><td>Jerusalem Story Team. (2021, October 10). Musrara: The new city neighborhood that became no-man's-land. <i>Jerusalem Story</i></td><td>The division of Musrara into three parts</td><td class="l"><a href="https://www.jerusalemstory.com/en/article/musrara-new-city-neighborhood-became-no-mans-land">Jerusalem Story</a></td></tr>
+    <tr><td>Caridi, P. (2015). Musrara, the center of the world. <i>Jerusalem Quarterly</i>, (62), 29-49</td><td>North African immigrants in the vacated houses; life along the border</td><td class="l"><a href="https://www.jerusalemstory.com/en/article/musrara-center-world">Jerusalem Story</a></td></tr>
+    <tr><td>Musrara. (n.d.). In <i>Wikipedia</i></td><td>The allocation of houses by the Ministry of Housing; the Black Panthers</td><td class="l"><a href="https://en.wikipedia.org/wiki/Musrara">Wikipedia</a></td></tr>
+    <tr><td>Khalili, B. (2008-2011). <i>The Mapping Journey Project</i> [Eight-channel video]. The Museum of Modern Art</td><td>Routes drawn by hand on a map; hands and voices without faces</td><td class="l"><a href="https://www.moma.org/collection/works/188576">MoMA</a></td></tr>
+  </tbody>
+</table>
+
+<h1 id="structure">Proposed Workshop Structure</h1>
+<p>The workshop is proposed as two full days at the close of Week 4. Durations are indicative and can be adjusted to the program and to the distance between the venue and Önder.</p>
+
+<h2 id="day1">Day 1: Presentation, Walk and Reflection</h2>
+<table>
+  <colgroup><col style="width:20%"><col style="width:13%"><col style="width:41%"><col style="width:26%"></colgroup>
+  <thead><tr><th>Session</th><th>Duration</th><th>Content</th><th>Related section</th></tr></thead>
+  <tbody>
+    <tr><td class="l">Welcome and introduction</td><td class="l">15 min</td><td>The workshop, the two days and the four layers of border</td><td class="l">Workshop / (Imaginary) Lands of Border: What Line Contains</td></tr>
+    <tr><td class="l">Opening presentation</td><td class="l">60 min</td><td>The line as abstraction; Jerusalem, 1948 and Musrara; from Musrara to Önder; scale</td><td class="l">Workshop Framework: The Thickness of a Line</td></tr>
+    <tr><td class="l">Questions</td><td class="l">15 min</td><td>Brief questions on the presentation before the walk</td><td class="l">Workshop Framework: The Thickness of a Line</td></tr>
+    <tr><td class="l">Lunch and transfer to Önder</td><td class="l">90 min</td><td>Depending on the venue</td><td class="l"></td></tr>
+    <tr><td class="l">Walk through Önder</td><td class="l">120 min</td><td>A walk through the neighbourhood, the vacant parcels, the paths and the edge with Siteler; participants photograph throughout</td><td class="l">Four Layers of Border</td></tr>
+    <tr><td class="l">Reflection</td><td class="l">30 min</td><td>A gathering at a central meeting point to reflect on what was seen, conceived as a space for thinking rather than debate</td><td class="l">Four Layers of Border</td></tr>
+    <tr><td class="l">Documentation</td><td class="l">Throughout the day</td><td>Filming and photography in line with the consent procedure</td><td class="l">Ethical Considerations</td></tr>
+  </tbody>
+</table>
+
+<h2 id="day2">Day 2: Mapping</h2>
+<table>
+  <colgroup><col style="width:20%"><col style="width:13%"><col style="width:41%"><col style="width:26%"></colgroup>
+  <thead><tr><th>Session</th><th>Duration</th><th>Content</th><th>Related section</th></tr></thead>
+  <tbody>
+    <tr><td class="l">Grouping and set-up</td><td class="l">30 min</td><td>Participants form four groups according to the layers; prints and materials are distributed</td><td class="l">Four Layers of Border</td></tr>
+    <tr><td class="l">Selection of material</td><td class="l">45 min</td><td>Each group selects photographs from the walk and plan and section prints at the scales relevant to its layer; photographs are printed or prepared for projection</td><td class="l">Mapping Önder in Three Dimensions</td></tr>
+    <tr><td class="l">Mapping, first session</td><td class="l">120 min, including a break</td><td>Each group builds its layer on the wall</td><td class="l">Mapping Önder in Three Dimensions</td></tr>
+    <tr><td class="l">Lunch</td><td class="l">60 min</td><td>Lunch break</td><td class="l"></td></tr>
+    <tr><td class="l">Mapping, second session</td><td class="l">90 min</td><td>The four layers are brought together into a single three-dimensional map</td><td class="l">Mapping Önder in Three Dimensions</td></tr>
+    <tr><td class="l">Walk-through and closing reflection</td><td class="l">45 min</td><td>Groups present their layers; closing reflection on the (imaginary) land the map produces</td><td class="l">The (Imaginary) Land</td></tr>
+    <tr><td class="l">Documentation</td><td class="l">Throughout the day</td><td>Filming and photography in line with the consent procedure</td><td class="l">Ethical Considerations</td></tr>
+  </tbody>
+</table>
+</section>
+
+</body>
+</html>
