@@ -1,12 +1,13 @@
 """Denizbank mail sınıflandırıcı.
 
-Konu satırına göre üç karar verir:
-  KEEP    - işlem, güvenlik, hesap bildirimi; gelen kutusunda kalır
-  JUNK    - kampanya, reklam, kutlama; "Junk" etiketi eklenir ve arşivlenir
-  UNKNOWN - iki listeye de uymaz; dokunulmaz, raporda gösterilir
+Konu satırına göre dört karar verir:
+  KEEP        - güvenlik, ödeme ve hesap bildirimi; gelen kutusunda kalır
+  TRANSACTION - işlem bilgilendirmesi; "Denizbank - İşlem Bilgileri" etiketine
+                taşınır ve gelen kutusundan kaldırılır
+  JUNK        - kampanya, reklam, kutlama; Junk'a alınması önerilir
+  UNKNOWN     - hiçbir listeye uymaz; dokunulmaz, raporda gösterilir
 
-KEEP her zaman önceliklidir: bir konu hem KEEP hem JUNK kalıbına uyarsa
-mail gelen kutusunda kalır.
+Öncelik sırası: SECURITY (KEEP) > TRANSACTION > diğer KEEP > JUNK > UNKNOWN.
 
 Kullanım:
   python3 classify.py "Konu satırı"            -> tek konu
@@ -15,36 +16,46 @@ Kullanım:
 import re
 import sys
 
-KEEP_PATTERNS = [
-    r"işlem bilgilendirme",
-    r"nakit çekil",
-    r"harcama iadesi",
-    r"talimat",
+# Gelen kutusunda kalması gereken güvenlik ve ödeme bildirimleri; her zaman önceliklidir.
+SECURITY_PATTERNS = [
     r"parola",
     r"şifre",
     r"güvenli",
     r"dolandırıcı",
-    r"ekstre",
-    r"hesap özeti",
+    r"doğrulama",
+    r"(?<!para )giriş",
     r"son ödeme",
     r"borç",
-    r"dekont",
-    r"emri bildirim",
-    r"bildirim",
-    r"bilgilendirme",
-    r"sözleşme",
-    r"giriş",
-    r"doğrulama",
     r"gecikme",
-    r"hatırlatma",
-    r"teslim",
-    r"iptal",
     r"itiraz",
-    r"yatırıldı",
+    r"iptal",
+    r"sözleşme",
+    r"teslim",
+    r"hatırlatma",
+    r"ekstre",
+    r"hesap özeti",
     r"ücretlerde değişiklik",
     r"\bhk\.",
+]
+
+# "Denizbank - İşlem Bilgileri" etiketine taşınan işlem bilgilendirmeleri.
+TRANSACTION_PATTERNS = [
+    r"işlem bilgilendirme",
+    r"nakit çekil",
+    r"harcama iadesi",
+    r"talimat",
+    r"dekont",
+    r"emri bildirim",
+    r"yatırıldı",
+    r"para girişi",
     r"dijital slip",
     r"hesap hareketleri",
+]
+
+# Güvenlik ya da işlem listesine girmeyen genel bildirimler gelen kutusunda kalır.
+KEEP_PATTERNS = [
+    r"bildirim",
+    r"bilgilendirme",
 ]
 
 JUNK_PATTERNS = [
@@ -97,6 +108,10 @@ def normalize(text: str) -> str:
 
 def classify(subject: str) -> str:
     s = normalize(subject)
+    if any(re.search(p, s) for p in SECURITY_PATTERNS):
+        return "KEEP"
+    if any(re.search(p, s) for p in TRANSACTION_PATTERNS):
+        return "TRANSACTION"
     if any(re.search(p, s) for p in KEEP_PATTERNS):
         return "KEEP"
     if any(re.search(p, s) for p in JUNK_PATTERNS):
