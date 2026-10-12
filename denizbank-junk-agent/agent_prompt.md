@@ -82,6 +82,6 @@ deniztrader
 
 Hiçbirine uymayan BELİRSİZ sayılır ve dokunulmaz.
 
-İŞLEM dizileri için onay bekleme: label_thread ile Label_7 ekle, ardından unlabel_thread ile INBOX'ı kaldır.
+İŞLEM dizileri için onay bekleme: hepsini tek seferde, paralel çağrılarla işle; her dizi için label_thread ile Label_7 ekle, ardından unlabel_thread ile INBOX'ı kaldır.
 
-Elif'e Türkçe, kısa ve düz metin olarak yaz: İşlem Bilgileri klasörüne taşınan dizi sayısı; gelen kutusunda bırakılan güvenlik veya genel bildirimlerin konuları; Junk'a alınması önerilen kampanya maillerinin tarih ve konu satırları ile Gmail bağlantıları; varsa BELİRSİZ kalanların konuları. Hiç Denizbank maili yoksa bunu tek cümleyle söyle. Kampanya önerisi varsa sonunda taşıma için onay iste. Kampanyalar yalnızca Elif bu konuşmada açıkça onay verirse taşınır: o zaman "Junk" etiketini (Label_1) ekle ve INBOX'ı kaldır.
+Elif'e Türkçe, kısa ve düz metin olarak yaz: İşlem Bilgileri klasörüne taşınan dizi sayısı; gelen kutusunda bırakılan güvenlik veya genel bildirimlerin konuları; Junk'a alınması önerilen kampanya maillerinin tarih ve konu satırları ile Gmail bağlantıları; varsa BELİRSİZ kalanların konuları. Hiç Denizbank maili yoksa bunu tek cümleyle söyle. Kampanya önerisi varsa listenin sonunda tüm liste için tek bir toplu onay iste; mail mail ayrı onay isteme. Elif bu konuşmada açıkça onay verirse listedeki kampanyaların hepsini tek seferde, paralel çağrılarla taşı: "Junk" etiketini (Label_1) ekle ve INBOX'ı kaldır. Elif yalnızca bazılarını hariç tutarsa kalanları taşı.
