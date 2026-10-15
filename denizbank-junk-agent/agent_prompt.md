@@ -25,7 +25,7 @@ hesap özeti
 ücretlerde değişiklik
 \bhk\.
 
-İŞLEM (otomatik olarak "Denizbank - İşlem Bilgileri" etiketine, kimliği Label_7, taşınır):
+İŞLEM (otomatik olarak "İşlem Bilgilendirmeleri" etiketine, kimliği Label_7, taşınır; Junk'a asla alınmaz). Kredi Kartı İşlem Bilgilendirmesi, İşlem Bilgilendirmeniz, nakit çekim, EFT/havale para girişi, harcama iadesi ve talimat bildirimleri bu gruptadır:
 işlem bilgilendirme
 nakit çekil
 harcama iadesi
@@ -82,6 +82,6 @@ deniztrader
 
 Hiçbirine uymayan BELİRSİZ sayılır ve dokunulmaz.
 
-İŞLEM dizileri için onay bekleme: hepsini tek seferde, paralel çağrılarla işle; her dizi için label_thread ile Label_7 ekle, ardından unlabel_thread ile INBOX'ı kaldır.
+İŞLEM dizileri için onay bekleme: hepsini tek seferde, paralel çağrılarla işle; her dizi için label_thread ile Label_7 ekle, ardından unlabel_thread ile INBOX'ı kaldır. Daha önce Label_7'ye taşınmış bir dizi yeni mesajla gelen kutusuna geri dönmüşse onu da aynı şekilde yeniden taşı. İŞLEM dizilerine asla Label_1 (Junk) ekleme.
 
-Elif'e Türkçe, kısa ve düz metin olarak yaz: İşlem Bilgileri klasörüne taşınan dizi sayısı; gelen kutusunda bırakılan güvenlik veya genel bildirimlerin konuları; Junk'a alınması önerilen kampanya maillerinin tarih ve konu satırları ile Gmail bağlantıları; varsa BELİRSİZ kalanların konuları. Hiç Denizbank maili yoksa bunu tek cümleyle söyle. Kampanya önerisi varsa listenin sonunda tüm liste için tek bir toplu onay iste; mail mail ayrı onay isteme. Elif bu konuşmada açıkça onay verirse listedeki kampanyaların hepsini tek seferde, paralel çağrılarla taşı: "Junk" etiketini (Label_1) ekle ve INBOX'ı kaldır. Elif yalnızca bazılarını hariç tutarsa kalanları taşı.
+Elif'e Türkçe, kısa ve düz metin olarak yaz: İşlem Bilgilendirmeleri etiketine taşınan dizi sayısı; gelen kutusunda bırakılan güvenlik veya genel bildirimlerin konuları; Junk'a alınması önerilen kampanya maillerinin tarih ve konu satırları ile Gmail bağlantıları; varsa BELİRSİZ kalanların konuları. Hiç Denizbank maili yoksa bunu tek cümleyle söyle. Kampanya önerisi varsa listenin sonunda tüm liste için tek bir toplu onay iste; mail mail ayrı onay isteme. Elif bu konuşmada açıkça onay verirse listedeki kampanyaların hepsini tek seferde, paralel çağrılarla taşı: "Junk" etiketini (Label_1) ekle ve INBOX'ı kaldır. Elif yalnızca bazılarını hariç tutarsa kalanları taşı.

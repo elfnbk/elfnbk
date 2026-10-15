@@ -2,7 +2,7 @@
 
 Konu satırına göre dört karar verir:
   KEEP        - güvenlik, ödeme ve hesap bildirimi; gelen kutusunda kalır
-  TRANSACTION - işlem bilgilendirmesi; "Denizbank - İşlem Bilgileri" etiketine
+  TRANSACTION - işlem bilgilendirmesi; "İşlem Bilgilendirmeleri" etiketine
                 taşınır ve gelen kutusundan kaldırılır
   JUNK        - kampanya, reklam, kutlama; Junk'a alınması önerilir
   UNKNOWN     - hiçbir listeye uymaz; dokunulmaz, raporda gösterilir
@@ -38,7 +38,7 @@ SECURITY_PATTERNS = [
     r"\bhk\.",
 ]
 
-# "Denizbank - İşlem Bilgileri" etiketine taşınan işlem bilgilendirmeleri.
+# "İşlem Bilgilendirmeleri" etiketine taşınan işlem bilgilendirmeleri.
 TRANSACTION_PATTERNS = [
     r"işlem bilgilendirme",
     r"nakit çekil",
