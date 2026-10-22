@@ -4,7 +4,7 @@ Konu satırına göre dört karar verir:
   KEEP        - güvenlik, ödeme ve hesap bildirimi; gelen kutusunda kalır
   TRANSACTION - işlem bilgilendirmesi; "İşlem Bilgilendirmeleri" etiketine
                 taşınır ve gelen kutusundan kaldırılır
-  JUNK        - kampanya, reklam, kutlama; Junk'a alınması önerilir
+  JUNK        - kampanya, reklam, kutlama; otomatik olarak Junk'a taşınır
   UNKNOWN     - hiçbir listeye uymaz; dokunulmaz, raporda gösterilir
 
 Öncelik sırası: SECURITY (KEEP) > TRANSACTION > diğer KEEP > JUNK > UNKNOWN.
