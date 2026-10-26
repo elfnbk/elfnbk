@@ -8,6 +8,8 @@ Kampanya mailleri ile işlem bildirimleri aynı adresten geldiği için mailler 
 
 `classify.py` konu satırına göre KEEP, TRANSACTION, JUNK ve UNKNOWN kararı verir. Güvenlik kalıpları her zaman önceliklidir, hiçbir listeye uymayan mail taşınmaz. `agent_prompt.md`, Claude Code rutininin her gün çalıştırdığı talimattır ve kural listeleri `classify.py` ile aynıdır. Kurallarda değişiklik yapıldığında rutinin talimatının da güncellenmesi gerekir.
 
+Ajan ayrıca Marshall'ın reklam adresinden (store@email.marshall.com) gelen bütün mailleri onay beklemeden Junk'a taşır. Marshall'ın başka adreslerinden gelen sipariş veya kargo maillerine dokunmaz.
+
 Kuralları yerelde denemek için:
 
 ```

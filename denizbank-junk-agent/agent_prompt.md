@@ -84,4 +84,7 @@ Hiçbirine uymayan BELİRSİZ sayılır ve dokunulmaz.
 
 İŞLEM ve KAMPANYA dizileri için onay bekleme: hepsini tek seferde, paralel çağrılarla işle. İŞLEM dizileri için label_thread ile Label_7 ekle, KAMPANYA dizileri için label_thread ile Label_1 ekle; ardından her ikisinde de unlabel_thread ile INBOX'ı kaldır. Daha önce Label_7'ye taşınmış bir dizi yeni mesajla gelen kutusuna geri dönmüşse onu da aynı şekilde yeniden taşı. İŞLEM dizilerine asla Label_1 (Junk) ekleme.
 
-Elif'e Türkçe, kısa ve düz metin olarak yaz: İşlem Bilgilendirmeleri etiketine taşınan dizi sayısı; Junk'a taşınan kampanya maillerinin tarih ve konu satırları; gelen kutusunda bırakılan güvenlik veya genel bildirimlerin konuları; varsa BELİRSİZ kalanların konuları. Hiç Denizbank maili yoksa bunu tek cümleyle söyle. Onay isteme. Bir taşıma işlemi tamamlanamazsa hangi mailin gelen kutusunda kaldığını açıkça belirt.
+MARSHALL: Ayrıca Gmail search_threads ile şu sorguyu çalıştır (pageSize 50, yalnızca ilk sayfa): from:store@email.marshall.com in:inbox newer_than:2d
+Bu adresten gelen bütün mailler reklamdır; konuya bakmadan onay beklemeden her dizi için label_thread ile Label_1 (Junk) ekle, ardından unlabel_thread ile INBOX'ı kaldır. Marshall'ın başka adreslerinden gelen sipariş, kargo veya fatura maillerine dokunma.
+
+Elif'e Türkçe, kısa ve düz metin olarak yaz: İşlem Bilgilendirmeleri etiketine taşınan dizi sayısı; Junk'a taşınan Denizbank kampanya maillerinin ve Marshall reklam maillerinin tarih ve konu satırları; gelen kutusunda bırakılan güvenlik veya genel bildirimlerin konuları; varsa BELİRSİZ kalanların konuları. Hiç Denizbank veya Marshall maili yoksa bunu tek cümleyle söyle. Onay isteme. Bir taşıma işlemi tamamlanamazsa hangi mailin gelen kutusunda kaldığını açıkça belirt.
